@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BienvenueController!{% endblock %}
+
+{% block body %}
+
+    {% if prenom is defined%}
+    <h1>Hello Bienvenue {{ prenom }} Controller!</h1>
+    {% else %}
+    <h1>Hello Bienvenue Controller!</h1>
+    {% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BienvenueController!{% endblock %}
+
+{% block body %}
+
+    <h1>Bienvenue dans l'équipages du Roi des pirates</h1>
+    
+    <p></p>
+
+    {% for name in EquipageOnePiece  %}
+
+    <li>{{ name }}</li>
+
+    {% endfor %}
+
+{% endblock %}
