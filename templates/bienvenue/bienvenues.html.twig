@@ -2,15 +2,19 @@
 
 {% block title %}Hello BienvenueController!{% endblock %}
 
+
+
 {% block body %}
+
+    <h1> Hello BienvenueController!</h1>
 
     <h1>Bienvenue dans l'équipages du Roi des pirates</h1>
     
-    <p></p>
+  
 
     {% for name in EquipageOnePiece  %}
 
-    <li>{{ name }}</li>
+    <li><a href="{{ path('app_bienvenue_bienvenueprenom', {'prenom':  name }) }}">{{ name }}</a></li>
 
     {% endfor %}
 

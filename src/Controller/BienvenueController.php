@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class BienvenueController extends AbstractController
 {
-    #[Route('/bienvenue', name: 'app_bienvenue')]
+    #[Route('/welcome', name: 'app_bienvenue')]
     public function bienvenue(): Response
     {
         // Appelle simulé au modèle
@@ -18,7 +18,7 @@ class BienvenueController extends AbstractController
 
     }
 
-    #[Route('/bienvenue/{prenom}', name: 'app_Gotham')]
+    #[Route('/bienvenue/{prenom}', name: 'app_bienvenue_bienvenueprenom')]
     public function bienvenuePrenom(string $prenom): Response
     {
         // Appelle simulé au modèle
@@ -37,7 +37,7 @@ class BienvenueController extends AbstractController
         $EquipageOnePiece = ["Luffy", "Zoro", "Nami", "Usopp", "Sanji", "Chopper", "Robin", "Franky", "Brook", "Jinbe"];
         // Apelle a la vue
         return $this->render('bienvenue/bienvenues.html.twig',[
-            'EquipageOnePiece' => $EquipageOnePiece,
+            'EquipageOnePiece' => $EquipageOnePiece
         ]);
 
     }
