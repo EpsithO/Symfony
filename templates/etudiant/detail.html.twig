@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenidos a etudiantes {% endblock %}
+
+{% block body %}
+
+    <div class="list">
+        <h1>Lista de estudiantes</h1>
+        <ul>
+                <li><a> Identidad : {{ etudiant.prenom }} {{ etudiant.nom}}</a></li>
+                <li><a> el correo electrónico {{ etudiant.prenom }}</a></li>
+                <li><a> nacio el  {{ etudiant.dateNaissance | date('d/m/y') }}</a></li>
+                <li><a> Anios {{ etudiant.age }}</a></li>
+        </ul>
+{% endblock %}

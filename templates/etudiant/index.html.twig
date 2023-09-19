@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenidos a etudiantes {% endblock %}
+
+{% block body %}
+
+    <div class="list">
+        <h1>Voici la liste de los estudiantes a el campus</h1>
+        <ul>
+            {% for etudiant in etudiants %}
+            <li><a href="{{ path('app_etudiant_detail', {"id": etudiant.id}) }}"> {{ etudiant.prenom }} {{ etudiant.nom }} </a> </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+
